@@ -336,7 +336,6 @@ int main() {
   }
   else
   {
-    cout << levels[choice][1] << levels[choice][2] << levels[choice][0] << num_players;
     playGame(levels[choice][1], levels[choice][2], levels[choice][0], num_players);
   }
 }
