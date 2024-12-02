@@ -161,7 +161,7 @@ Rules_Game get_type_rules() {
 
 void playGame(int range, int guessLimit, int  lev, int playerCount) {
   string levels[3] = { "Easy", "Medium", "Hard" };
-  string level = levels[lev];
+  string level = levels[lev - 1];
   srand(time(0)); // Seed random number generator
   int target = rand() % range + 1; // Generate random number in the given range
   vector<int> attempts(playerCount, 0); // Track attempts for each player
@@ -336,6 +336,7 @@ int main() {
   }
   else
   {
+    cout << levels[choice][1] << levels[choice][2] << levels[choice][0] << num_players;
     playGame(levels[choice][1], levels[choice][2], levels[choice][0], num_players);
   }
 }
